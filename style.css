@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+nav{
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    background: #C9D6FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+    nav ul li{
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-family:'Alumni Sans Collegiate One', sans-serif;
+    
+}
+nav ul li:hover >a{
+    color: orangered;
+}
+nav ul li .submenu li{
+    display: block;
+    padding: 0;
+    
+}
+nav ul li .submenu{
+    position: absolute;
+    width: 250px;
+    text-align: left;
+    background-color: azure;
+    border-top: 3px solid orangered;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 100px; 
+    transition: 0.8s;
+}
+.submenu a{
+    padding: 5px;
+}
+
+nav ul li:hover >.submenu{
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+}
+.submenu li:hover> a{
+    color: white;
+    background-color: rgba(228, 7, 7, 0.787);
+}
+.submenu .submenu{
+    left: 100%;
+    top: 0;
+}
